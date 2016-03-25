@@ -7,4 +7,5 @@ Very WIP. Much wow!
 ```
 /word-play
   /anagram
+  /palindrome
 ```
