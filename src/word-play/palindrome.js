@@ -4,6 +4,7 @@
  *
  * Functions related to palindromes.
  */
+import {seq} from 'talisman/helpers';
 
 /**
  * Function detecting whether the given sequence is a palindrome.
@@ -18,7 +19,7 @@
 export default function palindrome(sequence) {
 
   // Handling strings
-  sequence = typeof sequence === 'string' ? sequence.split('') : sequence;
+  sequence = seq(sequence);
 
   const length = sequence.length;
 
