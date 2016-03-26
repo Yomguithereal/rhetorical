@@ -10,9 +10,10 @@ import words from 'lodash/words';
 /**
  * Function taking raw text and returning its acrostic.
  *
- * @param  {string} type - The type of acrostic to return, "letter" or "word".
- * @param  {string} text - The text to process.
- * @return {array}       - The acrostic.
+ * @param  {string|function} type - The type of acrostic to return
+ *                                  "letter", "word" or a custom method.
+ * @param  {string}          text - The text to process.
+ * @return {array}                - The acrostic.
  */
 export default function acrostic(type, text) {
 
