@@ -46,6 +46,7 @@
     "extends": "@yomguithereal/eslint-config/es6"
   },
   "dependencies": {
+    "cmu-pronouncing-dictionary": "^1.0.3",
     "lodash": "^4.6.1"
   }
 }
