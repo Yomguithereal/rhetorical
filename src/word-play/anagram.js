@@ -31,7 +31,7 @@ export default function anagram(...sequences) {
 
     // We compare the length as a mean to break sooner if needed
     return (
-      standardSequence.length ===  sequence.length &&
+      standardSequence.length === sequence.length &&
       isEqual(frequencies(sequence), standardFrequencies)
     );
   });
