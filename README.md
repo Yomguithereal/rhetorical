@@ -4,8 +4,6 @@ Very WIP. Much wow!
 
 ## Current modules
 
-```
-/word-play
-  /anagram
-  /palindrome
-```
+* word-play
+  * anagram
+  * palindrome

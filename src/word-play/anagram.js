@@ -24,9 +24,15 @@ export default function anagram(...sequences) {
   if (sequences.length < 2)
     throw Error('rhetorical/word-play/anagram: too few arguments.');
 
-  const standardFrequencies = frequencies(sequences[0]);
+  const standardSequence = sequences[0],
+        standardFrequencies = frequencies(standardSequence);
 
   return sequences.slice(1).every(function(sequence) {
-    return isEqual(frequencies(sequence), standardFrequencies);
+
+    // We compare the length as a mean to break sooner if needed
+    return (
+      standardSequence.length ===  sequence.length &&
+      isEqual(frequencies(sequence), standardFrequencies)
+    );
   });
 }
