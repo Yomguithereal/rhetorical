@@ -6,7 +6,7 @@
 import assert from 'assert';
 import anagram from '../../src/word-play/anagram';
 
-describe('word-play/anagram', function() {
+describe('anagram', function() {
 
   it('should throw if too few arguments are given.', function() {
     assert.throws(function() {

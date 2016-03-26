@@ -6,7 +6,7 @@
 import assert from 'assert';
 import palindrome from '../../src/word-play/palindrome';
 
-describe('word-play/palindrome', function() {
+describe('palindrome', function() {
 
   it('should correctly detect palindromes.', function() {
     assert(palindrome([1, 2, 3, 2, 1]));
