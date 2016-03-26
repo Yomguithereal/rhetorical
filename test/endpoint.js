@@ -9,5 +9,6 @@ describe('poetry', function() {
 
 describe('word-play', function() {
   require('./word-play/anagram.js');
+  require('./word-play/contrepet.js');
   require('./word-play/palindrome.js');
 });
