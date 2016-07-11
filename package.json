@@ -5,10 +5,15 @@
   "main": "index.js",
   "scripts": {
     "check": "npm test && npm run lint",
+    "clean": "rimraf $npm_package_rhetorical_folders",
     "dist": "babel src --out-dir ./",
     "lint": "eslint src test",
     "prepublish": "npm run dist",
+    "postpublish": "npm run clean",
     "test": "mocha --compilers js:babel-core/register -R spec ./test/endpoint.js"
+  },
+  "rhetorical": {
+    "folders": "poetry word-play"
   },
   "repository": {
     "type": "git",
@@ -47,6 +52,7 @@
   },
   "dependencies": {
     "cmu-pronouncing-dictionary": "^1.0.3",
-    "lodash": "^4.6.1"
+    "lodash": "^4.6.1",
+    "talisman": "^0.9.0"
   }
 }

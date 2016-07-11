@@ -5,7 +5,8 @@
  * Functions related to acrostics.
  */
 import first from 'lodash/head';
-import words from 'lodash/words';
+import words from 'talisman/tokenizers/words/naive';
+import {default as lineTokenizer} from 'talisman/tokenizers/lines/naive';
 
 /**
  * Function taking raw text and returning its acrostic.
@@ -17,18 +18,17 @@ import words from 'lodash/words';
  */
 export default function acrostic(type, text) {
 
-  // Splitting the text using line breaks
-  text = text
-    .split(/\n/)
+  // Tokenizing the lines & dropping useless empty lines
+  const lines = lineTokenizer(text)
     .filter(line => line);
 
   // Using a custom method
   if (typeof type === 'function')
-    return text.map(type);
+    return lines.map(type);
 
   return type === 'letter' ?
-    text.map(first) :
-    text.map(line => first(words(line)));
+    lines.map(first) :
+    lines.map(line => first(words(line)));
 }
 
 /**
